@@ -1,0 +1,32 @@
+﻿<Window x:Class="PasswordChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordChecker"
+        mc:Ignorable="d"
+        Title="Password checker" Height="450" Width="800" ResizeMode="NoResize"
+        >
+    <Grid Background="DarkSlateGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="789*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <PasswordBox x:Name="passwordInputFirst" HorizontalAlignment="Left" Margin="307,139,0,0" VerticalAlignment="Top" Width="156" Background="Gold" Foreground="White" PasswordChanged="PasswordInputFirst_Changed">
+            <PasswordBox.Effect>
+                <DropShadowEffect/>
+            </PasswordBox.Effect>
+        </PasswordBox>
+        <Label x:Name="passwordLabel" Content="Please input password" HorizontalAlignment="Left" Margin="323,94,0,0" VerticalAlignment="Top" Foreground="Wheat"/>
+        <PasswordBox x:Name="passwordInputSecond" HorizontalAlignment="Left" Margin="307,186,0,0" VerticalAlignment="Top" Width="156" Background="Gold" Foreground="White" PasswordChanged="PasswordInputSecond_Changed">
+            <PasswordBox.Effect>
+                <DropShadowEffect/>
+            </PasswordBox.Effect>
+        </PasswordBox>
+        <CheckBox x:Name="checkboxHasNumber" Content="Number present?" HorizontalAlignment="Left" Margin="200,218,0,0" VerticalAlignment="Top" IsEnabled="False" Foreground="Wheat"/>
+        <CheckBox x:Name="checkboxHasUpper" Content="Uppercase present?" HorizontalAlignment="Left" Margin="328,218,0,0" VerticalAlignment="Top" IsEnabled="False" Foreground="Wheat"/>
+        <CheckBox x:Name="checkboxHasLower" Content="Lowercase present?" HorizontalAlignment="Left" Margin="459,218,0,0" VerticalAlignment="Top" IsEnabled="False" Foreground="Wheat"/>
+        <CheckBox x:Name="checkboxPasswordMatch" Content="Passwords match?" HorizontalAlignment="Left" Margin="328,252,0,0" VerticalAlignment="Top" IsEnabled="False" Foreground="Wheat"/>
+        <Button x:Name="buttonNavigate" Content="Navigate to next window" HorizontalAlignment="Left" Margin="307,284,0,0" VerticalAlignment="Top" Width="153" Foreground="Black" Background="Gold" Click="ButtonNavigate_Click"  />
+    </Grid>
+</Window>
